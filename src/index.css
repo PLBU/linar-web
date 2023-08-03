@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: Poppins;
+  font-weight: 500;
+  src: url('fonts/Poppins-Medium.ttf');
+}
+
+@font-face {
+  font-family: Poppins;
+  font-weight: 300;
+  src: url('fonts/Poppins-Light.ttf');
+}
+
+@font-face {
+  font-family: Lora;
+  font-weight: 400;
+  src: url('fonts/Lora-Regular.ttf');
+}
+
+h1 {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 96px;
+}
+
+h2 {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 64px;
+}
+
+
+h3 {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 48px;
+}
+
+h4 {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 40px;
+}
+
+.p1 {
+  font-family: Lora;
+  font-size: 32px;
+}
+
+.p2 {
+  font-family: Lora;
+  font-size: 24px;
+}
+
+.chip {
+  font-family: Poppins;
+  font-weight: 300;
+  font-size: 20px;
+}
