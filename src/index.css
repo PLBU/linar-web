@@ -4,6 +4,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Font Family */
+
 @font-face {
   font-family: Poppins;
   font-weight: 500;
@@ -61,4 +63,12 @@ h4 {
   font-family: Poppins;
   font-weight: 300;
   font-size: 20px;
+}
+
+/* Variables */
+:root {
+  --white1: #FFFFFF;
+  --orange1: #FFB03A;
+  --black1: #1E1E1E;
+  --gray1: #939393;
 }

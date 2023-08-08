@@ -2,6 +2,7 @@ import { createEffect, type Component, createSignal } from 'solid-js';
 import PocketBase from 'pocketbase';
 
 import me from './assets/me-memoji.png';
+import Chip from './components/chip/Chip';
 
 const pb = new PocketBase('https://linar-web.fly.dev');
 
@@ -29,7 +30,7 @@ const App: Component = () => {
       <h1>
         Project Title: {projects().length > 0 ? projects()[0].title : "ikuzo"}
       </h1>
-      <p class="chip">Nani</p>
+      <Chip text='Minecraft' />
     </div>
   );
 };

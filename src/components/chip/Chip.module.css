@@ -1,0 +1,9 @@
+.container {
+    padding: 5px 12px;
+    border-radius: 16px;
+    border: 1px solid var(--gray1);
+    background: var(--orange1);
+    color: var(--white1);
+    width: min-content;
+    height: min-content;
+}
