@@ -1,0 +1,9 @@
+.normal {
+    color: var(--black1);
+    display: inline;
+}
+
+.highlight {
+    color: var(--orange1);
+    display: inline;
+}
