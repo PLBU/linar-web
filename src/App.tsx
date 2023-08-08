@@ -3,6 +3,7 @@ import PocketBase from 'pocketbase';
 
 import me from './assets/me-memoji.png';
 import Chip from './components/chip/Chip';
+import ChipGroup from './components/chip-group/ChipGroup';
 
 const pb = new PocketBase('https://linar-web.fly.dev');
 
@@ -24,13 +25,21 @@ const App: Component = () => {
     console.log(projects())
   }, [projects])
 
+  const texts = [
+    'Minecraft',
+    'Maincrafeter',
+    'Dota 2',
+    'Android',
+    'iOS'
+  ]
+
   return (
     <div>
       <img width={160} src={me}/>
       <h1>
         Project Title: {projects().length > 0 ? projects()[0].title : "ikuzo"}
       </h1>
-      <Chip text='Minecraft' />
+      <ChipGroup texts={texts} />
     </div>
   );
 };

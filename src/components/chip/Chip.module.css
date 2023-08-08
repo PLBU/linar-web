@@ -4,6 +4,6 @@
     border: 1px solid var(--gray1);
     background: var(--orange1);
     color: var(--white1);
-    width: min-content;
-    height: min-content;
+    white-space: nowrap;
+    cursor: default;
 }
