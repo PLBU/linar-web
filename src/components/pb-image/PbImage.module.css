@@ -1,0 +1,4 @@
+.container {
+    object-fit: contain;
+    background-color: var(--gray2);
+}
