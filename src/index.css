@@ -73,4 +73,6 @@ h4 {
   --black1: #1E1E1E;
   --gray1: #939393;
   --gray2: #D9D9D9;
+  --projectWidth: 480px;
+  --projectHeight: 640px
 }

@@ -1,0 +1,42 @@
+.container {
+    width: fit-content;
+    position: relative;
+}
+
+button {
+    border: none;
+}
+
+.left {
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.left:enabled {
+    font-size: 32px;
+}
+
+.right {
+    background-color: transparent;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.right:enabled {
+    font-size: 32px;
+}
+
+.placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gray2);
+    color: var(--gray1);
+    width: var(--projectWidth);
+    height: var(--projectHeight);
+}

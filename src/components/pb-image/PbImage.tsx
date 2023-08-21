@@ -1,19 +1,17 @@
-import { type Component } from 'solid-js';
+import { createEffect, type Component, Signal } from 'solid-js';
 
 import pb from '../../service';
 
 import styles from './PbImage.module.css';
 
-const PbImage: Component<{ 
-    record: any, 
-    imgPath: string, 
-    width: number, 
-    height: number 
+const PbImage: Component<{
+    record: any,
+    imgPath: () => string,
 }> = (props) => {
-    const url = pb.getFileUrl(props.record, props.imgPath)
+    const getFileUrl = () => pb.getFileUrl(props.record, props.imgPath())
 
     return (
-        <img class={styles.container} src={url} width={props.width} height={props.height}/>
+        <img class={styles.container} src={getFileUrl()} />
     )
 }
 

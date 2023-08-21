@@ -7,24 +7,9 @@ import Title from './components/title/Title';
 import pb from './service';
 import PbImage from './components/pb-image/PbImage';
 import HomePage from './pages/home/home';
+import ProjectsPage from './pages/projects/projects';
 
 const App: Component = () => {
-  const [projects, setProjects] = createSignal<Project[]>([])
-  const callApi = async () => {
-    const records: Project[] = await pb.collection('projects').getFullList({
-      sort: '-created',
-    });
-
-    setProjects(records)
-  }
-
-  createEffect(() => {
-    callApi()
-  })
-
-  createEffect(() => {
-    console.log(projects())
-  }, [projects])
 
   const texts = [
     'Minecraft',
@@ -37,6 +22,7 @@ const App: Component = () => {
   return (
     <div>
       <HomePage />
+      <ProjectsPage />
     </div>
   );
 };

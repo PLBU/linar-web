@@ -1,4 +1,6 @@
 .container {
     object-fit: contain;
     background-color: var(--gray2);
+    width: var(--projectWidth);
+    height: var(--projectHeight);
 }
