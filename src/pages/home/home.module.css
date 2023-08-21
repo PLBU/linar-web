@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+img {
+    width: 282px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.description {
+    margin: 0;
+    color: var(--gray1);
+}
+
+.highlight {
+    color: var(--orange1);
+    display: inline;
+}
+
+.normal {
+    color: var(--black1);
+    margin: 0;
+}
