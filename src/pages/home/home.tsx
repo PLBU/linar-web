@@ -1,6 +1,6 @@
 import { type Component } from 'solid-js';
 
-import me from '../../assets/me-memoji.png'
+import me from '../../assets/images/me-memoji.png'
 
 import styles from './home.module.css';
 
