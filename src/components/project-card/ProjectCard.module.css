@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.titleContainer {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 8px;
+}
+
+.summaryContainer {
+    margin-left: 40px;
+}
+
+.description {
+    margin-top: 40px;
+    color: var(--gray1);
+}

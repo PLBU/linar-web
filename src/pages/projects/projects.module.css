@@ -1,7 +1,11 @@
 .container {
     display: table-cell;
     vertical-align: middle;
-    padding: 0 120px;
+    padding: 0 200px;
     width: 100vw;
     height: 100vh;
+}
+
+.projectsContainer {
+    margin-top: 48px;
 }
