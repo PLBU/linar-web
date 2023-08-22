@@ -1,32 +1,43 @@
 import { createSignal, type Component, createEffect } from 'solid-js';
 
+import Image from '../image/Image';
+import pb from '../../service';
+
 import styles from './PbImageGroup.module.css';
-import PbImage from '../pb-image/PbImage';
 
 const PbImageGroup: Component<{
     project: any,
 }> = (props) => {
     const [idx, setIdx] = createSignal<number>(0)
-    const [imgPath, setImgPath] = createSignal<string>('')
+    const [imgPaths, setImgPaths] = createSignal<string[] | null>(null)
+
+    const getFileUrl = (imgPath: string) => pb.getFileUrl(props.project, imgPath)
 
     createEffect(() => {
-        setImgPath(props.project.images[idx()])
-    }, [idx])
+        if (props.project != null) {
+            const tempImgPaths = []
+            for (const imgPath of props.project.images) {
+                tempImgPaths.push(getFileUrl(imgPath))
+            }
+
+            setImgPaths(tempImgPaths)
+        }
+    }, [props.project])
 
     return (
         <div class={styles.container}>
-            {props.project || imgPath() != '' ?
+            {imgPaths() != null ?
                 <>
-                    <button 
-                        class={`${styles.left} chip`} 
-                        disabled={idx() == 0} 
+                    <button
+                        class={`${styles.left} chip`}
+                        disabled={idx() == 0}
                         onClick={() => setIdx(idx() - 1)}>
                         &lt
                     </button>
-                    <PbImage record={props.project} imgPath={imgPath} />
-                    <button 
-                        class={`${styles.right} chip`} 
-                        disabled={idx() == props.project.images.length - 1} 
+                    <Image imgPath={imgPaths()![idx()]} />
+                    <button
+                        class={`${styles.right} chip`}
+                        disabled={idx() == props.project.images.length - 1}
                         onClick={() => setIdx(idx() + 1)}>
                         &gt
                     </button>

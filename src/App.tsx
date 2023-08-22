@@ -5,7 +5,7 @@ import ChipGroup from './components/chip-group/ChipGroup';
 import Title from './components/title/Title';
 
 import pb from './service';
-import PbImage from './components/pb-image/PbImage';
+import Image from './components/image/Image';
 import HomePage from './pages/home/home';
 import ProjectsPage from './pages/projects/projects';
 
