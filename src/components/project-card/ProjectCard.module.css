@@ -12,11 +12,14 @@
 
 .summaryContainer {
     margin-left: 40px;
+    width: calc(100vw - (2 * var(--padHorizontal) + var(--projectWidth)));
+    overflow: visible;
 }
 
 .description {
     margin-top: 40px;
     color: var(--gray1);
+    text-align: justify;
 }
 
 .url {

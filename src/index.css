@@ -78,5 +78,6 @@ h4 {
   --gray1: #939393;
   --gray2: #D9D9D9;
   --projectWidth: 480px;
-  --projectHeight: 640px
+  --projectHeight: 640px;
+  --padHorizontal: 200px;
 }
