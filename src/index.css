@@ -79,5 +79,6 @@ h4 {
   --gray2: #D9D9D9;
   --projectWidth: 480px;
   --projectHeight: 640px;
+  --iconSize: 40px;
   --padHorizontal: 200px;
 }

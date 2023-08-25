@@ -10,3 +10,21 @@
     margin-top: 40px;
     width: 100%;
 }
+
+.left {
+    cursor: pointer;
+    transform: rotate(180deg);
+    width: var(--iconSize);
+    height: var(--iconSize);
+}
+
+.right {
+    cursor: pointer;
+    width: var(--iconSize);
+    height: var(--iconSize);
+}
+
+.buttons {
+    margin-left: 20px;
+    display: inline;
+}
