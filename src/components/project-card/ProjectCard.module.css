@@ -23,8 +23,8 @@
 }
 
 .url {
-    width: 40px;
-    height: 40px;
+    width: var(--iconSize);
+    height: var(--iconSize);
     margin-left: 20px;
     cursor: pointer;
 }

@@ -1,5 +1,14 @@
+.container {
+    display: inline;
+}
+
 .normal {
     color: var(--black1);
+    display: inline;
+}
+
+.light {
+    color: var(--white1);
     display: inline;
 }
 

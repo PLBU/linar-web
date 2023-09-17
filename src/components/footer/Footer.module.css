@@ -1,0 +1,17 @@
+.container{
+    width: 100vw;
+    height: var(--footerHeight);
+    background-color: var(--black1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.description {
+    margin: 0;
+    color: var(--white1);
+    display: inline;
+    cursor: pointer;
+    text-decoration: none;
+}

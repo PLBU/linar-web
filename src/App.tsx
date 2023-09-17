@@ -1,28 +1,25 @@
-import { createEffect, type Component, createSignal } from 'solid-js';
+import { onMount, type Component, createSignal } from 'solid-js';
 
-import Chip from './components/chip/Chip';
-import ChipGroup from './components/chip-group/ChipGroup';
-import Title from './components/title/Title';
-
-import pb from './service';
-import Image from './components/image/Image';
 import HomePage from './pages/home/home';
 import ProjectsPage from './pages/projects/projects';
+import DevelopmentPage from './pages/development/development';
+import Footer from './components/footer/Footer';
 
 const App: Component = () => {
+  const [width, setWidth] = createSignal(window.innerWidth);
 
-  const texts = [
-    'Minecraft',
-    'Maincrafeter',
-    'Dota 2',
-    'Android',
-    'iOS'
-  ]
+  onMount(() => {
+    window.addEventListener('resize', () => {
+      setWidth(window.innerWidth);
+    });
+  });
 
-  return (
+  if (width() < 1200) return <DevelopmentPage/>
+  return  (
     <div>
       <HomePage />
       <ProjectsPage />
+      <Footer />
     </div>
   );
 };

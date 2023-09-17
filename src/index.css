@@ -81,4 +81,43 @@ h4 {
   --projectHeight: 640px;
   --iconSize: 40px;
   --padHorizontal: 200px;
+  --footerHeight: 360px;
+}
+
+@media (max-width: 1400px) {
+  :root {
+    --projectWidth: 320px;
+    --projectHeight:427px;
+    --iconSize: 32px;
+    --padHorizontal: 120px;
+    --footerHeight: 300px;
+  }
+
+  h2 {
+    font-size: 48px;
+    margin: 0;
+  }
+  
+  
+  h3 {
+    font-size: 40px;
+    margin: 0;
+  }
+  
+  h4 {
+    font-size: 32px;
+    margin: 0;
+  }
+  
+  .p1 {
+    font-size: 24px;
+  }
+  
+  .p2 {
+    font-size: 20px;
+  }
+  
+  .chip {
+    font-size: 16px;
+  }
 }
