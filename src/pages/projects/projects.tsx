@@ -14,7 +14,7 @@ const ProjectsPage: Component = () => {
 
     const fetchProjectsRemotely = async () => {
         const records: Project[] = await pb.collection('projects').getFullList({
-            sort: '-created',
+            sort: 'order_no',
         });
 
         setProjects(records)

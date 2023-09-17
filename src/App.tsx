@@ -14,7 +14,7 @@ const App: Component = () => {
     });
   });
 
-  if (width() < 1200) return <DevelopmentPage/>
+  if (width() < 1100) return <DevelopmentPage/>
   return  (
     <div>
       <HomePage />
