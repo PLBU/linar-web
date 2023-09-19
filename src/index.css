@@ -80,8 +80,12 @@ h4 {
   --projectWidth: 480px;
   --projectHeight: 640px;
   --iconSize: 40px;
-  --padHorizontal: 200px;
+  --padHorizontal: 180px;
   --footerHeight: 360px;
+  --projDescMaxHeight: 440px;
+  --projDescMarginTop: 40px;
+  --projSummaryMarginLeft: 40px;
+  --meImgWidth: 282px;
 }
 
 @media (max-width: 1400px) {
@@ -91,7 +95,8 @@ h4 {
     --iconSize: 32px;
     --padHorizontal: 120px;
     --footerHeight: 300px;
-  }
+    --projDescMaxHeight: 280px;
+}
 
   h2 {
     font-size: 48px;
@@ -129,7 +134,8 @@ h4 {
     --iconSize: 32px;
     --padHorizontal: 100px;
     --footerHeight: 300px;
-  }
+    --meImgWidth: 240px;
+}
 
   h1 {
     font-size: 80px;
@@ -153,6 +159,51 @@ h4 {
   
   .p1 {
     font-size: 24px;
+  }
+  
+  .p2 {
+    font-size: 16px;
+  }
+  
+  .chip {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 992px) {
+  :root {
+    --projectWidth: 300px;
+    --projectHeight: 400px;
+    --iconSize: 32px;
+    --padHorizontal: 48px;
+    --footerHeight: 300px;
+    --projDescMarginTop: 24px;
+    --projSummaryMarginLeft: 32px;
+    --meImgWidth: 196px;
+}
+
+  h1 {
+    font-size: 64px;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 36px;
+    margin: 0;
+  }
+  
+  h3 {
+    font-size: 28px;
+    margin: 0;
+  }
+  
+  h4 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .p1 {
+    font-size: 18px;
   }
   
   .p2 {

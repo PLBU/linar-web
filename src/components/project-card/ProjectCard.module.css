@@ -11,13 +11,15 @@
 }
 
 .summaryContainer {
-    margin-left: 40px;
-    width: calc(100vw - (2 * var(--padHorizontal) + var(--projectWidth)));
+    margin-left: var(--projSummaryMarginLeft);
+    width: calc(100vw - (2 * var(--padHorizontal) + var(--projectWidth) + var(--projSummaryMarginLeft)));
     overflow: visible;
 }
 
 .description {
-    margin-top: 40px;
+    overflow-y: scroll;
+    max-height: var(--projDescMaxHeight);
+    margin-top: var(--projDescMarginTop);
     color: var(--gray1);
     text-align: justify;
 }
