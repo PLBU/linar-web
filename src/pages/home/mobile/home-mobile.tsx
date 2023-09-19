@@ -1,10 +1,10 @@
 import { type Component } from 'solid-js';
 
-import me from '../../assets/images/me-memoji.png'
+import me from '../../../assets/images/me-memoji.png'
 
-import styles from './home.module.css';
+import styles from './home-mobile.module.css';
 
-const HomePage: Component = () => {
+const HomeMobilePage: Component = () => {
     return (
         <div class={styles.container}>
             <div class={styles.introContainer}>
@@ -12,11 +12,9 @@ const HomePage: Component = () => {
                 <h1 class={styles.normal}>Renaldi Arlin</h1>
                 <p class={`p1 ${styles.description}`}>Fullstack Software Developer</p>
             </div>
-            <div>
-                <img class={styles.meImg} src={me} />
-            </div>
+            <img class={styles.meImg} src={me} />
         </div>
     )
 }
 
-export default HomePage
+export default HomeMobilePage

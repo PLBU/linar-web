@@ -121,10 +121,6 @@ h4 {
   .p2 {
     font-size: 20px;
   }
-  
-  .chip {
-    font-size: 16px;
-  }
 }
 
 @media (max-width: 1200px) {
@@ -179,7 +175,7 @@ h4 {
     --footerHeight: 300px;
     --projDescMarginTop: 24px;
     --projSummaryMarginLeft: 32px;
-    --meImgWidth: 196px;
+    --meImgWidth: 220px;
 }
 
   h1 {
@@ -209,8 +205,46 @@ h4 {
   .p2 {
     font-size: 16px;
   }
+}
+
+
+@media (max-width: 768px) {
+  :root {
+    --projectWidth: 300px;
+    --projectHeight: 400px;
+    --iconSize: 32px;
+    --padHorizontal: 48px;
+    --footerHeight: 300px;
+    --projDescMarginTop: 24px;
+    --projSummaryMarginLeft: 32px;
+    --introMarginLeft: 48px;
+}
+
+  h1 {
+    font-size: 56px;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 36px;
+    margin: 0;
+  }
   
-  .chip {
-    font-size: 14px;
+  h3 {
+    font-size: 28px;
+    margin: 0;
+  }
+  
+  h4 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .p1 {
+    font-size: 18px;
+  }
+  
+  .p2 {
+    font-size: 16px;
   }
 }
