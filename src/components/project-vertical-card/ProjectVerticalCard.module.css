@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.titleContainer {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 8px;
+    align-items: center;
+}
+
+.summaryContainer {
+    margin-top: 16px;
+    width: calc(100vw - 2 * var(--padHorizontal));
+    overflow: visible;
+}
+
+.description {
+    overflow-y: scroll;
+    max-height: var(--projDescMaxHeight);
+    margin-top: var(--projDescMarginTop);
+    color: var(--gray1);
+    text-align: justify;
+}
+
+.url {
+    width: var(--iconSize);
+    height: var(--iconSize);
+    margin-left: 16px;
+    cursor: pointer;
+}

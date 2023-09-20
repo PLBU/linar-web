@@ -207,17 +207,16 @@ h4 {
   }
 }
 
-
 @media (max-width: 768px) {
   :root {
-    --projectWidth: 300px;
-    --projectHeight: 400px;
-    --iconSize: 32px;
-    --padHorizontal: 48px;
+    --iconSize: 24px;
+    --padHorizontal: 24px;
     --footerHeight: 300px;
-    --projDescMarginTop: 24px;
-    --projSummaryMarginLeft: 32px;
+    --projDescMaxHeight: auto;
+    --projDescMarginTop: 12px;
     --introMarginLeft: 48px;
+    --projectWidth: calc(100vw - 2 * var(--padHorizontal));
+    --projectHeight: 50vh;
 }
 
   h1 {
@@ -226,7 +225,7 @@ h4 {
   }
 
   h2 {
-    font-size: 36px;
+    font-size: 32px;
     margin: 0;
   }
   
@@ -246,5 +245,52 @@ h4 {
   
   .p2 {
     font-size: 16px;
+  }
+}
+
+
+
+@media (max-width: 576px) {
+  :root {
+    --iconSize: 20px;
+    --padHorizontal: 20px;
+    --footerHeight: 200px;
+    --projDescMaxHeight: auto;
+    --projDescMarginTop: 12px;
+    --introMarginLeft: 48px;
+    --projectWidth: calc(100vw - 2 * var(--padHorizontal));
+    --projectHeight: 50vh;
+}
+
+  h1 {
+    font-size: 48px;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 28px;
+    margin: 0;
+  }
+  
+  h3 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  h4 {
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  .p1 {
+    font-size: 16px;
+  }
+  
+  .p2 {
+    font-size: 14px;
+  }
+
+  .chip {
+    font-size: 14px;
   }
 }

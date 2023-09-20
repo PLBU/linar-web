@@ -1,14 +1,13 @@
 .container {
-    display: table-cell;
-    vertical-align: middle;
-    padding: 0 var(--padHorizontal);
-    width: 100vw;
-    height: 100vh;
+    padding: var(--padHorizontal);
+    width: auto;
+    min-height: 100vh;
 }
 
 .projectsContainer {
-    margin-top: 40px;
-    width: 100%;
+    margin-top: 16px;
+    width: auto;
+    overflow-x: hidden;
 }
 
 .left {

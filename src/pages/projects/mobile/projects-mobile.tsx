@@ -3,10 +3,10 @@ import { createSignal, type Component, createEffect } from 'solid-js';
 import Title from '../../../components/title/Title';
 
 import styles from './projects-mobile.module.css';
-import ProjectCard from '../../../components/project-card/ProjectCard';
 import pb from '../../../service';
 
 import arrow from '../../../assets/icons/arrow.svg'
+import ProjectVerticalCard from '../../../components/project-vertical-card/ProjectVerticalCard';
 
 const ProjectsMobilePage: Component = () => {
     const [projects, setProjects] = createSignal<Project[]>([])
@@ -32,7 +32,7 @@ const ProjectsMobilePage: Component = () => {
                 {idx() < projects().length - 1 ? <img class={styles.right} src={arrow} onClick={() => setIdx(idx() + 1)}/> : null}
             </div>
             <div class={styles.projectsContainer}>
-                <ProjectCard project={projects()[idx()]} />
+                <ProjectVerticalCard project={projects()[idx()]} />
             </div>
         </div>
     )
