@@ -257,7 +257,7 @@ h4 {
     --footerHeight: 200px;
     --projDescMaxHeight: auto;
     --projDescMarginTop: 12px;
-    --introMarginLeft: 48px;
+    --introMarginLeft: 24px;
     --projectWidth: calc(100vw - 2 * var(--padHorizontal));
     --projectHeight: 50vh;
 }
