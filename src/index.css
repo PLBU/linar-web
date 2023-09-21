@@ -70,6 +70,12 @@ h4 {
   font-size: 20px;
 }
 
+.page {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
 /* Variables */
 :root {
   --white1: #FFFFFF;

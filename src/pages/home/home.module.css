@@ -5,6 +5,7 @@
     width: 100vw;
     align-items: center;
     justify-content: space-evenly;
+    scroll-snap-align: start;
 }
 
 .meImg {

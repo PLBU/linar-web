@@ -24,7 +24,7 @@ const App: Component = () => {
   });
 
   return (
-    <>
+    <div class='page'>
       {width() < 200
         ? <DevelopmentPage />
         : width() < 768 
@@ -39,7 +39,7 @@ const App: Component = () => {
           <Footer />
         </>
       }
-    </>
+    </div>
   );
 };
 

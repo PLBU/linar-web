@@ -1,6 +1,7 @@
 .container {
     display: table-cell;
     vertical-align: middle;
+    scroll-snap-align: start;
     padding: 0 var(--padHorizontal);
     width: 100vw;
     height: 100vh;
