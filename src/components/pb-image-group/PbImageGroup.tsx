@@ -32,14 +32,14 @@ const PbImageGroup: Component<{
             {imgPaths() != null ?
                 <>
                     <button
-                        class={styles.left}
+                        class={styles.leftChevron}
                         disabled={idx() == 0}
                         onClick={() => setIdx(idx() - 1)}>
                         <img src={chevron} />
                     </button>
                     <Image imgPath={imgPaths()![idx()]} />
                     <button
-                        class={styles.right}
+                        class={styles.rightChevron}
                         disabled={idx() == props.project.images.length - 1}
                         onClick={() => setIdx(idx() + 1)}>
                         <img src={chevron} />

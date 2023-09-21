@@ -8,33 +8,35 @@ button {
     cursor: pointer;
 }
 
-.left {
+.leftChevron {
     transform: rotate(180deg);
     background-color: transparent;
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
-    width: 0;
+    transition: all 0.3s;
+    opacity: 0;
 }
 
-.left:enabled {
-    width: var(--iconSize);
-    left: 8px;
+.leftChevron:enabled {
+    transition: all 0.3s;
+    opacity: 1;
 }
 
-.right {
+.rightChevron {
     background-color: transparent;
     position: absolute;
     right: 0;
     top: 0;
     bottom: 0;
-    width: 0;
+    transition: all 0.3s;
+    opacity: 0;
 }
 
-.right:enabled {
-    width: var(--iconSize);
-    right: 8px;
+.rightChevron:enabled {
+    transition: all 0.3s;
+    opacity: 1;
 }
 
 .placeholder {
