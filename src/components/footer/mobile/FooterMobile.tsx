@@ -5,7 +5,7 @@ import Title from '../../title/Title';
 
 const FooterMobile: Component = () => {
     return (
-        <div class={styles.container}>
+        <div class={styles.footerContainer}>
             <Title isLight={true} textBefore="Let's " highlight='Connect' />
             <div>
                 <a href={'https://mail.google.com/mail/?view=cm&fs=1&to=renaldi.linar@gmail.com'} target='_blank' class={`p2 ${styles.description}`}>E-Mail: renaldi@linar.my.id</a>

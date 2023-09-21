@@ -264,32 +264,29 @@ h4 {
   :root {
     --iconSize: 20px;
     --padHorizontal: 20px;
-    --footerHeight: 200px;
+    --footerHeight: 240px;
     --projDescMaxHeight: auto;
     --projDescMarginTop: 12px;
-    --introMarginLeft: 24px;
+    --introMarginLeft: var(--padHorizontal);
     --projectWidth: calc(100vw - 2 * var(--padHorizontal));
-    --projectHeight: 50vh;
+    --projectHeight: 40dvh;
+    --meImgWidth: 50vw;
 }
 
   h1 {
-    font-size: 48px;
-    margin: 0;
+    font-size: 40px;
   }
 
   h2 {
-    font-size: 28px;
-    margin: 0;
+    font-size: 24px;
   }
   
   h3 {
-    font-size: 24px;
-    margin: 0;
+    font-size: 20px;
   }
   
   h4 {
-    font-size: 20px;
-    margin: 0;
+    font-size: 18px;
   }
   
   .p1 {

@@ -9,15 +9,18 @@ button {
 }
 
 .left {
+    transform: rotate(180deg);
     background-color: transparent;
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
+    width: 0;
 }
 
 .left:enabled {
-    font-size: 32px;
+    width: var(--iconSize);
+    left: 8px;
 }
 
 .right {
@@ -26,10 +29,12 @@ button {
     right: 0;
     top: 0;
     bottom: 0;
+    width: 0;
 }
 
 .right:enabled {
-    font-size: 32px;
+    width: var(--iconSize);
+    right: 8px;
 }
 
 .placeholder {

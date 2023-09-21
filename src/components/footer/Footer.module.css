@@ -1,7 +1,7 @@
 .container{
     scroll-snap-align: start;
     position: relative;
-    width: 100vw;
+    width: auto;
     height: var(--footerHeight);
     background-color: var(--black1);
     display: flex;

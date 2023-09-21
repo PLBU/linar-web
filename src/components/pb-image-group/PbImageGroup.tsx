@@ -3,6 +3,8 @@ import { createSignal, type Component, createEffect } from 'solid-js';
 import Image from '../image/Image';
 import pb from '../../service';
 
+import chevron from '../../assets/icons/chevron.svg'
+
 import styles from './PbImageGroup.module.css';
 
 const PbImageGroup: Component<{
@@ -30,17 +32,17 @@ const PbImageGroup: Component<{
             {imgPaths() != null ?
                 <>
                     <button
-                        class={`${styles.left} chip`}
+                        class={styles.left}
                         disabled={idx() == 0}
                         onClick={() => setIdx(idx() - 1)}>
-                        &lt
+                        <img src={chevron} />
                     </button>
                     <Image imgPath={imgPaths()![idx()]} />
                     <button
-                        class={`${styles.right} chip`}
+                        class={styles.right}
                         disabled={idx() == props.project.images.length - 1}
                         onClick={() => setIdx(idx() + 1)}>
-                        &gt
+                        <img src={chevron} />
                     </button>
                 </>
                 : <div class={`${styles.placeholder} chip`}>
