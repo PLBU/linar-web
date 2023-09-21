@@ -1,4 +1,5 @@
 .container{
+    position: relative;
     width: 100vw;
     height: var(--footerHeight);
     background-color: var(--black1);
@@ -14,4 +15,10 @@
     color: var(--white1);
     cursor: pointer;
     text-decoration: none;
+}
+
+.credit {
+    position: absolute;
+    bottom: 4px;
+    color: var(--white1);
 }
