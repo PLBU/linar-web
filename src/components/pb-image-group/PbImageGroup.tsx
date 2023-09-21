@@ -20,6 +20,7 @@ const PbImageGroup: Component<{
                 tempImgPaths.push(getFileUrl(imgPath))
             }
 
+            setIdx(0)
             setImgPaths(tempImgPaths)
         }
     }, [props.project])
