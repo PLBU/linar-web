@@ -6,6 +6,7 @@ import DevelopmentPage from './pages/development/development';
 import Footer from './components/footer/Footer';
 import HomeMobilePage from './pages/home/mobile/home-mobile';
 import ProjectsMobilePage from './pages/projects/mobile/projects-mobile';
+import DesktopScreen from './screens/DesktopScreen';
 
 const App: Component = () => {
   const [width, setWidth] = createSignal(window.innerWidth);
@@ -32,9 +33,7 @@ const App: Component = () => {
           <ProjectsMobilePage />
         </>
         : <>
-          <HomePage />
-          <ProjectsPage />
-          <Footer />
+          <DesktopScreen />
         </>
       }
     </div>
