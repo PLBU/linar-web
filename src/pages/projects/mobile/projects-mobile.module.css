@@ -1,12 +1,21 @@
 .container {
-    scroll-snap-stop: always;
-    scroll-snap-align: start;
     width: auto;
 }
 
 .innerContainer {
-    min-height: 100dvh;
     padding: var(--padHorizontal);
+}
+
+@supports (min-height: 100dvh) {
+    .innerContainer {
+        min-height: 100dvh;
+    }
+}
+  
+@media not(min-height: 100dvh) {
+    .innerContainer {
+        min-height: 100vh;
+    }
 }
 
 .projectsContainer {

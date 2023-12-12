@@ -1,5 +1,4 @@
 .container{
-    scroll-snap-align: start;
     position: relative;
     width: auto;
     height: var(--footerHeight);

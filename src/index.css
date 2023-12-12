@@ -70,10 +70,16 @@ h4 {
   font-size: 20px;
 }
 
-.page {
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+@supports (height: 100dvh) {
+  .page {
+    height: 100dvh;
+  }
+}
+
+@media not(height: 100dvh) {
+  .page {
+    height: 100vh;
+  }
 }
 
 /* Variables */
@@ -226,8 +232,19 @@ h4 {
     --projDescMarginTop: 12px;
     --introMarginLeft: 48px;
     --projectWidth: calc(100vw - 2 * var(--padHorizontal));
-    --projectHeight: 50vh;
-}
+  }
+
+  @supports (--projectHeight: 50dvh) {
+    :root {
+      --projectHeight: 50dvh;
+    }
+  }
+  
+  @media not(--projectHeight: 50dvh) {
+    :root {
+      --projectHeight: 50vh;
+    }
+  }
 
   h1 {
     font-size: 56px;
@@ -273,9 +290,20 @@ h4 {
     --projDescMarginTop: 12px;
     --introMarginLeft: var(--padHorizontal);
     --projectWidth: calc(100vw - 2 * var(--padHorizontal));
-    --projectHeight: 40dvh;
     --meImgWidth: 50vw;
-}
+  }
+
+  @supports (--projectHeight: 40dvh) {
+    :root {
+      --projectHeight: 40dvh;
+    }
+  }
+  
+  @media not(--projectHeight: 40dvh) {
+    :root {
+      --projectHeight: 40vh;
+    }
+  }
 
   h1 {
     font-size: 40px;

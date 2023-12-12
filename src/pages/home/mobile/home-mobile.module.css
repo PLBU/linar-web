@@ -1,10 +1,20 @@
 .container {
-    scroll-snap-align: start;
     display: flex;
     flex-direction: column;
-    height: 100dvh;
     width: 100%;
     justify-content: center;
+}
+
+@supports (height: 100dvh) {
+    .container {
+        height: 100dvh;
+    }
+}
+  
+@media not(height: 100dvh) {
+    .container {
+        height: 100vh;
+    }
 }
 
 .introContainer {
