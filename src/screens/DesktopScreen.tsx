@@ -11,7 +11,7 @@ const pages = [
 const DesktopScreen: Component = () => {
     const [index, setIndex] = createSignal(0)
     const [isIndexChanging, setIsIndexChanging] = createSignal(false)
-    const [wheelContainer, setWheelContainer] = createSignal<HTMLDivElement | null>(null);
+    const [wheelContainer, setWheelContainer] = createSignal<HTMLDivElement | null>(null)
 
     const windowScroll = createScrollPosition();
 
