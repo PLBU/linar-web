@@ -16,6 +16,7 @@ const PbImageGroup: Component<{
     const getFileUrl = (imgPath: string) => pb.getFileUrl(props.project, imgPath)
 
     createEffect(() => {
+        setImgPaths(null)
         if (props.project != null) {
             const tempImgPaths = []
             for (const imgPath of props.project.images) {
