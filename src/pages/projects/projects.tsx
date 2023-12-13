@@ -7,6 +7,7 @@ import ProjectCard from '../../components/project-card/ProjectCard';
 import pb from '../../service';
 
 import arrow from '../../assets/icons/arrow.svg'
+import Footer from '../../components/footer/Footer';
 
 const ProjectsPage: Component = () => {
     const [projects, setProjects] = createSignal<Project[]>([])
@@ -25,16 +26,19 @@ const ProjectsPage: Component = () => {
     })
 
     return (
-        <div class={styles.container}>
-            <Title textBefore='Some of my ' highlight='Projects' />
-            <div class={styles.buttons}>
-                {idx() > 0 ? <img class={styles.left} src={arrow} onClick={() => setIdx(idx() - 1)}/> : null}
-                {idx() < projects().length - 1 ? <img class={styles.right} src={arrow} onClick={() => setIdx(idx() + 1)}/> : null}
+        <>
+            <div class={styles.container}>
+                <Title textBefore='Some of my ' highlight='Projects' />
+                <div class={styles.buttons}>
+                    {idx() > 0 ? <img class={styles.left} src={arrow} onClick={() => setIdx(idx() - 1)} /> : null}
+                    {idx() < projects().length - 1 ? <img class={styles.right} src={arrow} onClick={() => setIdx(idx() + 1)} /> : null}
+                </div>
+                <div class={styles.projectsContainer}>
+                    <ProjectCard project={projects()[idx()]} />
+                </div>
             </div>
-            <div class={styles.projectsContainer}>
-                <ProjectCard project={projects()[idx()]} />
-            </div>
-        </div>
+            <Footer />
+        </>
     )
 }
 
