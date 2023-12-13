@@ -11,45 +11,38 @@ const pages = [
 const DesktopScreen: Component = () => {
     const [index, setIndex] = createSignal(0)
     const [isIndexChanging, setIsIndexChanging] = createSignal(false)
+    const [wheelContainer, setWheelContainer] = createSignal<HTMLDivElement | null>(null);
 
     const windowScroll = createScrollPosition();
 
-    const wheelListener = (e: WheelEvent) => {
-        if (e.deltaY > 0 && !isIndexChanging() && windowScroll.y == 0) {
+    const handleWheel = (e: WheelEvent) => {
+        if (e.deltaY > 0 && !isIndexChanging()) {
             // Down
             if (index() + 1 < pages.length) {
-                setIndex(prev => prev + 1)
                 setIsIndexChanging(true)
                 setTimeout(() => {
+                    setIndex(prev => prev + 1)
                     setIsIndexChanging(false)
-                }, 200);
+                }, 250);
             }
-        } else if (e.deltaY < 0 && !isIndexChanging()) {
+        } else if (e.deltaY < 0 && !isIndexChanging() && windowScroll.y == 0) {
             // Up
             if (index() - 1 >= 0) {
-                setIndex(prev => prev - 1)
                 setIsIndexChanging(true)
                 setTimeout(() => {
+                    setIndex(prev => prev - 1)
                     setIsIndexChanging(false)
-                }, 200);
+                }, 250);
             }
         }
     }
 
-    createEffect(() => {
-        
+    onCleanup(() => {
+        setWheelContainer(null)
     })
 
-    onMount(() => {
-        window.addEventListener('wheel', wheelListener);
-    });
-
-    onCleanup(() => {
-        window.removeEventListener('wheel', wheelListener);
-    });
-
     return (
-        <div>
+        <div ref={setWheelContainer} onWheel={handleWheel} class={isIndexChanging() ? "fade-in" : "fade-in-active"}>
             {pages[index()]}
         </div>
     )
