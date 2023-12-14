@@ -1,5 +1,5 @@
-import { onCleanup, onMount, createSignal, type Component, createEffect } from "solid-js";
 import { createScrollPosition } from "@solid-primitives/scroll";
+import { createSignal, type Component } from "solid-js";
 import HomePage from "../pages/home/home";
 import ProjectsPage from "../pages/projects/projects";
 
@@ -11,7 +11,6 @@ const pages = [
 const DesktopScreen: Component = () => {
     const [index, setIndex] = createSignal(0)
     const [isIndexChanging, setIsIndexChanging] = createSignal(false)
-    const [wheelContainer, setWheelContainer] = createSignal<HTMLDivElement | null>(null)
 
     const windowScroll = createScrollPosition();
 
@@ -37,12 +36,8 @@ const DesktopScreen: Component = () => {
         }
     }
 
-    onCleanup(() => {
-        setWheelContainer(null)
-    })
-
     return (
-        <div ref={setWheelContainer} onWheel={handleWheel} class={isIndexChanging() ? "fade-in" : "fade-in-active"}>
+        <div onWheel={handleWheel} class={isIndexChanging() ? "fade-in" : "fade-in-active"}>
             {pages[index()]}
         </div>
     )
