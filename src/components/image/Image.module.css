@@ -1,6 +1,13 @@
 .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     object-fit: contain;
     background-color: var(--gray2);
     width: var(--projectWidth);
     height: var(--projectHeight);
+}
+
+.hidden {
+    display: none;
 }
