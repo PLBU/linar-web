@@ -1,16 +1,17 @@
 import { createScrollPosition } from "@solid-primitives/scroll";
-import { createSignal, type Component } from "solid-js";
+import { createSignal, type Component, createEffect } from "solid-js";
 import HomePage from "../pages/home/home";
 import ProjectsPage from "../pages/projects/projects";
 
-const pages = [
-    <HomePage />,
-    <ProjectsPage />
-]
 
-const DesktopScreen: Component = () => {
+const DesktopScreen: Component<{projects: Project[]}> = (props) => {
     const [index, setIndex] = createSignal(0)
     const [isIndexChanging, setIsIndexChanging] = createSignal(false)
+
+    const pages = [
+        <HomePage />,
+        <ProjectsPage projects={props.projects} />
+    ]
 
     const windowScroll = createScrollPosition();
 

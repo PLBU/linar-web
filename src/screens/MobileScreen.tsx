@@ -3,18 +3,17 @@ import { createScrollPosition } from "@solid-primitives/scroll";
 import HomeMobilePage from "../pages/home/mobile/home-mobile";
 import ProjectsMobilePage from "../pages/projects/mobile/projects-mobile";
 
-const pages = [
-    <HomeMobilePage />,
-    <ProjectsMobilePage />
-]
-
-const MobileScreen: Component = () => {
+const MobileScreen: Component<{projects: Project[]}> = (props) => {
     const [index, setIndex] = createSignal(0)
     const [isIndexChanging, setIsIndexChanging] = createSignal(false)
     const [startY, setStartY] = createSignal(0)
 
-    const windowScroll = createScrollPosition();
+    const pages = [
+        <HomeMobilePage />,
+        <ProjectsMobilePage projects={props.projects} />
+    ]
 
+    const windowScroll = createScrollPosition();
 
     const onTouchStart = (event: TouchEvent) => {
         setStartY(event.changedTouches[0].clientY)

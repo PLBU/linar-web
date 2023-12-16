@@ -9,21 +9,8 @@ import arrow from '../../../assets/icons/arrow.svg'
 import ProjectVerticalCard from '../../../components/project-vertical-card/ProjectVerticalCard';
 import FooterMobile from '../../../components/footer/mobile/FooterMobile';
 
-const ProjectsMobilePage: Component = () => {
-    const [projects, setProjects] = createSignal<Project[]>([])
+const ProjectsMobilePage: Component<{projects: Project[]}> = (props) => {
     const [idx, setIdx] = createSignal<number>(0)
-
-    const fetchProjectsRemotely = async () => {
-        const records: Project[] = await pb.collection('projects').getFullList({
-            sort: 'order_no',
-        });
-
-        setProjects(records)
-    }
-
-    createEffect(() => {
-        fetchProjectsRemotely()
-    })
 
     return (
         <div class={styles.container}>
@@ -31,10 +18,10 @@ const ProjectsMobilePage: Component = () => {
                 <Title textBefore='Some of my ' highlight='Projects' />
                 <div class={styles.buttons}>
                     {idx() > 0 ? <img class={styles.left} src={arrow} onClick={() => setIdx(idx() - 1)}/> : null}
-                    {idx() < projects().length - 1 ? <img class={styles.right} src={arrow} onClick={() => setIdx(idx() + 1)}/> : null}
+                    {idx() < props.projects.length - 1 ? <img class={styles.right} src={arrow} onClick={() => setIdx(idx() + 1)}/> : null}
                 </div>
                 <div class={styles.projectsContainer}>
-                    <ProjectVerticalCard project={projects()[idx()]} />
+                    <ProjectVerticalCard project={props.projects[idx()]} />
                 </div>
             </div>
             <FooterMobile />
