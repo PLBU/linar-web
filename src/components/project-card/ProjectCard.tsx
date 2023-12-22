@@ -20,8 +20,8 @@ const ProjectCard: Component<{ project: Project }> = (props) => {
                         </a>
                         : null}
                 </div>
-                <ChipGroup texts={props.project ? props.project.technologies : ['Teching up']} />
-                <div class={`p2 ${styles.description}`}>{props.project ? props.project.description : "Waiting description ..."}</div>
+                <ChipGroup isMobile={false} texts={props.project ? props.project.technologies : ['Teching up']} />
+                <div onWheel={e => e.stopPropagation()} class={`p2 ${styles.description}`}>{props.project ? props.project.description : "Waiting description ..."}</div>
             </div>
         </div>
     )

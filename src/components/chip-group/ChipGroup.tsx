@@ -3,14 +3,14 @@ import { createSignal, type Component, onCleanup } from 'solid-js';
 import styles from './ChipGroup.module.css';
 import Chip from '../chip/Chip';
 
-const ChipGroup: Component<{ texts: string[] }> = (props) => {
+const ChipGroup: Component<{ texts: string[], isMobile: Boolean }> = (props) => {
     const [scrollContainer, setScrollContainer] = createSignal<HTMLDivElement | null>(null)
 
     const handleScroll = (event: WheelEvent) => {
-        if (scrollContainer()) {
+        if (!props.isMobile && scrollContainer()) {
             scrollContainer()!.scrollLeft += event.deltaY
-            event.preventDefault() // Prevent default scrolling behavior
             event.stopPropagation()
+            event.preventDefault()
         }
     };
 
