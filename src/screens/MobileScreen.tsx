@@ -22,7 +22,7 @@ const MobileScreen: Component<{projects: Project[]}> = (props) => {
     const onTouchEnd = (event: TouchEvent) => {
         const deltaY = event.changedTouches[0].clientY - startY()
 
-        if (deltaY > 200) {
+        if (deltaY > 50) {
             if (!isIndexChanging() && index() - 1 >= 0 && windowScroll.y == 0) {
                 event.preventDefault()
                 setIsIndexChanging(true)
@@ -31,7 +31,7 @@ const MobileScreen: Component<{projects: Project[]}> = (props) => {
                     setIsIndexChanging(false)
                 }, 250);
             }
-        } else if (deltaY < -200) {
+        } else if (deltaY < -50) {
             if (!isIndexChanging() && index() + 1 < pages.length) {
                 event.preventDefault()
                 setIsIndexChanging(true)

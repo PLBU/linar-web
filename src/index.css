@@ -120,7 +120,7 @@ h4 {
   --padHorizontal: 180px;
   --footerHeight: 360px;
   --projDescMaxHeight: 440px;
-  --projDescMarginTop: 40px;
+  --projDescMarginTop: 30px;
   --projSummaryMarginLeft: 40px;
   --meImgWidth: 282px;
 }
@@ -166,8 +166,8 @@ h4 {
 
 @media (max-width: 1200px) {
   :root {
-    --projectWidth: 320px;
-    --projectHeight:427px;
+    --projectWidth: 300px;
+    --projectHeight:400px;
     --iconSize: 32px;
     --padHorizontal: 100px;
     --footerHeight: 300px;
@@ -209,12 +209,12 @@ h4 {
 
 @media (max-width: 992px) {
   :root {
-    --projectWidth: 300px;
-    --projectHeight: 400px;
+    --projectWidth: 270px;
+    --projectHeight: 360px;
     --iconSize: 32px;
     --padHorizontal: 48px;
     --footerHeight: 300px;
-    --projDescMarginTop: 24px;
+    --projDescMarginTop: 20px;
     --projSummaryMarginLeft: 32px;
     --meImgWidth: 220px;
 }
